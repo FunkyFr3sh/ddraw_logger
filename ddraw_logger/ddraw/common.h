@@ -7,8 +7,9 @@
 
 #define WIN32_LEAN_AND_MEAN
 #define STRICT
+#include <initguid.h>
 #include <ddraw.h>
-#include <d3d.h>
+#include "d3d.h"
 
 #include <string>
 #include <sstream>

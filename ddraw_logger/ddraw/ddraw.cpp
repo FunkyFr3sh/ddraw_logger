@@ -6,7 +6,6 @@
 #include "DirectDraw.h"
 #include "DirectDrawClipper.h"
 
-#pragma comment(lib, "dxguid")
 
 static LibraryLoader ddraw("ddraw.dll");
 

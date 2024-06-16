@@ -16,6 +16,9 @@
   <ItemGroup>
     <ClInclude Include="CoMemPtr.h" />
     <ClInclude Include="common.h" />
+    <ClInclude Include="d3d.h" />
+    <ClInclude Include="d3dcaps.h" />
+    <ClInclude Include="d3dtypes.h" />
     <ClInclude Include="Direct3D.h" />
     <ClInclude Include="Direct3DDevice.h" />
     <ClInclude Include="Direct3DExecuteBuffer.h" />
@@ -60,18 +63,19 @@
     <ProjectGuid>{13934377-EED9-4816-8003-89794467391D}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>ddraw</RootNamespace>
+    <WindowsTargetPlatformVersion>7.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141_xp</PlatformToolset>
     <CharacterSet>NotSet</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v141_xp</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>NotSet</CharacterSet>
   </PropertyGroup>
