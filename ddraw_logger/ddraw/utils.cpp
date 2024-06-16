@@ -341,3 +341,49 @@ std::string tostr_D3DRECT(LPD3DRECT lpRect)
 
 	return str.str();
 }
+
+std::string tostr_DDCAPS_DX1(LPDDCAPS_DX1 lpDDDriverCaps)
+{
+	if (lpDDDriverCaps == nullptr)
+	{
+		return " NULL";
+	}
+
+	std::ostringstream str;
+
+	str << "\tddsCaps.dwCaps";
+
+	DWORD dwCaps = lpDDDriverCaps->ddsCaps.dwCaps;
+
+	STR_ENUM(dwCaps, DDSCAPS, ALPHA);
+	STR_ENUM(dwCaps, DDSCAPS, BACKBUFFER);
+	STR_ENUM(dwCaps, DDSCAPS, COMPLEX);
+	STR_ENUM(dwCaps, DDSCAPS, FLIP);
+	STR_ENUM(dwCaps, DDSCAPS, FRONTBUFFER);
+	STR_ENUM(dwCaps, DDSCAPS, OFFSCREENPLAIN);
+	STR_ENUM(dwCaps, DDSCAPS, OVERLAY);
+	STR_ENUM(dwCaps, DDSCAPS, PALETTE);
+	STR_ENUM(dwCaps, DDSCAPS, PRIMARYSURFACE);
+	STR_ENUM(dwCaps, DDSCAPS, SYSTEMMEMORY);
+	STR_ENUM(dwCaps, DDSCAPS, TEXTURE);
+	STR_ENUM(dwCaps, DDSCAPS, 3DDEVICE);
+	STR_ENUM(dwCaps, DDSCAPS, VIDEOMEMORY);
+	STR_ENUM(dwCaps, DDSCAPS, VISIBLE);
+	STR_ENUM(dwCaps, DDSCAPS, WRITEONLY);
+	STR_ENUM(dwCaps, DDSCAPS, ZBUFFER);
+	STR_ENUM(dwCaps, DDSCAPS, OWNDC);
+	STR_ENUM(dwCaps, DDSCAPS, LIVEVIDEO);
+	STR_ENUM(dwCaps, DDSCAPS, HWCODEC);
+	STR_ENUM(dwCaps, DDSCAPS, MODEX);
+	STR_ENUM(dwCaps, DDSCAPS, MIPMAP);
+	STR_ENUM(dwCaps, DDSCAPS, ALLOCONLOAD);
+	STR_ENUM(dwCaps, DDSCAPS, VIDEOPORT);
+	STR_ENUM(dwCaps, DDSCAPS, LOCALVIDMEM);
+	STR_ENUM(dwCaps, DDSCAPS, NONLOCALVIDMEM);
+	STR_ENUM(dwCaps, DDSCAPS, STANDARDVGAMODE);
+	STR_ENUM(dwCaps, DDSCAPS, OPTIMIZED);
+
+	//str << std::endl;
+
+	return str.str();
+}

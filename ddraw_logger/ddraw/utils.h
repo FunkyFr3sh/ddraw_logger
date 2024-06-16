@@ -12,4 +12,5 @@ std::string tostr_HR(HRESULT hr);
 std::string tostr_GUID(const GUID* lpGUID);
 std::string tostr_RECT(LPRECT lpRect);
 std::string tostr_DDSURFACEDESC(LPDDSURFACEDESC lpDDSurfaceDesc);
+std::string tostr_DDCAPS_DX1(LPDDCAPS_DX1 lpDDDriverCaps);
 std::string tostr_D3DRECT(LPD3DRECT lpRect);

@@ -333,6 +333,9 @@ HRESULT DirectDraw2::GetCaps(
 	HRESULT hr = this->_original->GetCaps(lpDDDriverCaps, lpDDHELCaps);
 
 	str << std::endl;
+	str << tostr_DDCAPS_DX1((LPDDCAPS_DX1)lpDDDriverCaps);
+
+	str << std::endl;
 	str << tostr_HR(hr);
 
 	str << std::endl << "\treturn to: " << _ReturnAddress();
