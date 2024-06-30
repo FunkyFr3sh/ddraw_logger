@@ -39,4 +39,5 @@ void LogText(std::string text)
 	str << currentTime << '\t' << text.c_str() << std::endl;
 
 	g_file << str.str();
+	g_file.flush();
 }
