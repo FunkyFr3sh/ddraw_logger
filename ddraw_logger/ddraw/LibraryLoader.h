@@ -10,12 +10,14 @@ class LibraryLoader
 public:
 	LibraryLoader(LPCSTR lpLibFileName)
 	{
+		this->_module = LoadLibraryA("ddrawx.dll");
+
 		char path[MAX_PATH];
 		GetSystemDirectoryA(path, MAX_PATH);
 		strcat_s(path, "\\");
 		strcat_s(path, lpLibFileName);
 
-		this->_module = LoadLibraryA(path);
+		this->_module = this->_module ? this->_module : LoadLibraryA(path);
 	}
 
 	~LibraryLoader()
