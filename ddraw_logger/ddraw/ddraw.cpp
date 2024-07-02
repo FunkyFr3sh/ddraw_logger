@@ -9,55 +9,6 @@
 
 static LibraryLoader ddraw("ddraw.dll");
 
-extern "C" __declspec(naked) void AcquireDDThreadLock()
-{
-	static auto ddraw_proc = ddraw.GetAddress("AcquireDDThreadLock");
-
-	__asm jmp ddraw_proc;
-}
-
-extern "C" __declspec(naked) void CompleteCreateSysmemSurface()
-{
-	static auto ddraw_proc = ddraw.GetAddress("CompleteCreateSysmemSurface");
-
-	__asm jmp ddraw_proc;
-}
-
-extern "C" __declspec(naked) void D3DParseUnknownCommand()
-{
-	static auto ddraw_proc = ddraw.GetAddress("D3DParseUnknownCommand");
-
-	__asm jmp ddraw_proc;
-}
-
-extern "C" __declspec(naked) void DDGetAttachedSurfaceLcl()
-{
-	static auto ddraw_proc = ddraw.GetAddress("DDGetAttachedSurfaceLcl");
-
-	__asm jmp ddraw_proc;
-}
-
-extern "C" __declspec(naked) void DDInternalLock()
-{
-	static auto ddraw_proc = ddraw.GetAddress("DDInternalLock");
-
-	__asm jmp ddraw_proc;
-}
-
-extern "C" __declspec(naked) void DDInternalUnlock()
-{
-	static auto ddraw_proc = ddraw.GetAddress("DDInternalUnlock");
-
-	__asm jmp ddraw_proc;
-}
-
-extern "C" __declspec(naked) void DSoundHelp()
-{
-	static auto ddraw_proc = ddraw.GetAddress("DSoundHelp");
-
-	__asm jmp ddraw_proc;
-}
-
 extern "C" HRESULT WINAPI DirectDrawCreate(
 	_In_   GUID FAR *lpGUID,
 	_Out_  LPDIRECTDRAW FAR *lplpDD,
@@ -272,44 +223,3 @@ extern "C" HRESULT WINAPI DirectDrawEnumerateW(
 	return hr;
 }
 
-extern "C" __declspec(naked) void GetDDSurfaceLocal()
-{
-	static auto ddraw_proc = ddraw.GetAddress("GetDDSurfaceLocal");
-
-	__asm jmp ddraw_proc;
-}
-
-extern "C" __declspec(naked) void GetOLEThunkData()
-{
-	static auto ddraw_proc = ddraw.GetAddress("GetOLEThunkData");
-
-	__asm jmp ddraw_proc;
-}
-
-extern "C" __declspec(naked) void GetSurfaceFromDC()
-{
-	static auto ddraw_proc = ddraw.GetAddress("GetSurfaceFromDC");
-
-	__asm jmp ddraw_proc;
-}
-
-extern "C" __declspec(naked) void RegisterSpecialCase()
-{
-	static auto ddraw_proc = ddraw.GetAddress("RegisterSpecialCase");
-
-	__asm jmp ddraw_proc;
-}
-
-extern "C" __declspec(naked) void ReleaseDDThreadLock()
-{
-	static auto ddraw_proc = ddraw.GetAddress("ReleaseDDThreadLock");
-
-	__asm jmp ddraw_proc;
-}
-
-extern "C" __declspec(naked) void SetAppCompatData()
-{
-	static auto ddraw_proc = ddraw.GetAddress("SetAppCompatData");
-
-	__asm jmp ddraw_proc;
-}

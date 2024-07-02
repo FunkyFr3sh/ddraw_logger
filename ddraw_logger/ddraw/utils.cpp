@@ -158,7 +158,7 @@ std::string tostr_GUID(const GUID* lpGUID)
 		return " DDCREATE_HARDWAREONLY";
 	}
 
-	TOSTR_IID(IUnknown);
+	//TOSTR_IID(IUnknown);
 	TOSTR_IID(IDirectDraw);
 	TOSTR_IID(IDirectDraw2);
 	TOSTR_IID(IDirectDraw4);
