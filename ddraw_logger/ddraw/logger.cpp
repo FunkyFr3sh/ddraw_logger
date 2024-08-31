@@ -3,6 +3,7 @@
 
 #include "logger.h"
 
+#include <windows.h>
 #include <fstream>
 #include <sstream>
 #include <ctime>
@@ -36,7 +37,21 @@ void LogText(std::string text)
 	int currentTime = clock() - g_startTime;
 
 	std::ostringstream str;
-	str << currentTime << '\t' << text.c_str() << std::endl;
+	//str << currentTime << '\t' << text.c_str() << std::endl;
+
+	SYSTEMTIME st;
+	GetLocalTime(&st);
+	char datetime[64];
+	sprintf(
+		datetime,
+		"[%lu] %02d:%02d:%02d.%03d ",
+		GetCurrentThreadId(),
+		st.wHour,
+		st.wMinute,
+		st.wSecond,
+		st.wMilliseconds);
+
+	str << datetime << '\t' << text.c_str() << std::endl;
 
 	g_file << str.str();
 	g_file.flush();
