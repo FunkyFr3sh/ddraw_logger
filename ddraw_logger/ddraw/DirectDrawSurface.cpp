@@ -46,6 +46,13 @@ HRESULT DirectDrawSurface::QueryInterface(
 		{
 			*obp = CreateWrapperT(Direct3DTexture, *obp);
 		}
+		else if (riid == IID_IDirectDrawSurface2 || riid == IID_IDirectDrawSurface3 || riid == IID_IDirectDrawSurface4 || riid == IID_IDirectDrawSurface7)
+		{
+			str << std::endl;
+			str << "\tNOT IMPLEMENTED";
+
+			*obp = CreateWrapperT(DirectDrawSurface, *obp);
+		}
 		else
 		{
 			str << std::endl;
