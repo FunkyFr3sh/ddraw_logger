@@ -530,7 +530,7 @@ HRESULT DirectDraw::RestoreDisplayMode()
 	return hr;
 }
 
-char* dbg_mes_to_str(int id)
+const char* dbg_mes_to_str(int id)
 {
     switch (id)
     {
